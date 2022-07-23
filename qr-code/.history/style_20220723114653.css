@@ -1,0 +1,25 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+:root{
+    --main1-color: #1f2b25;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-color: #ff0000;
+}
