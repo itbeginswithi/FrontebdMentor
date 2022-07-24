@@ -1,0 +1,13 @@
+import './App.scss';
+
+function App() {
+  return (
+    <main>
+      <div className="wrapper">
+
+      </div>
+    </main>
+  );
+}
+
+export default App;
