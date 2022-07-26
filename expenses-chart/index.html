@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses Chart</title>
+    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="flex">
+    <main class="container flex-col g-1">   
+        <div class="header flex sb" role="header">
+            <div class="header__balance">
+                <h3>My balance</h3>
+                <span>$921.48</span>
+            </div>
+            <div class="header__logo">
+                <img src="./images/logo.svg" alt="Mastercard"/>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="spending">
+                <h1>Spending - last 7 days</h1>
+                <ul class="spending__graph flex ai-end">
+                    <li class="dailySpending">
+                        <div class="dailySpending__pillar" data-amount="$20.00" data-color="green"></div>
+                        <span class="dailySpending__day">mon</span>
+                    </li>
+                    <li class="dailySpending">
+                        <div class="dailySpending__pillar" data-amount="$33.00"></div>
+                        <span class="dailySpending__day">tue</span>
+                    </li>
+                    <li class="dailySpending">
+                        <div class="dailySpending__pillar cyan" data-amount="$52.36"></div>
+                        <span class="dailySpending__day">wed</span>
+                    </li>
+                    <li class="dailySpending">
+                        <div class="dailySpending__pillar" data-amount="$31.07"></div>
+                        <span class="dailySpending__day">thu</span>
+                    </li>
+                    <li class="dailySpending">
+                        <div class="dailySpending__pillar" data-amount="$25.00"></div>
+                        <span class="dailySpending__day">fri</span>
+                    </li>
+                    <li class="dailySpending">
+                        <div class="dailySpending__pillar" data-amount="$40.00"></div>
+                        <span class="dailySpending__day">sat</span>
+                    </li>
+                    <li class="dailySpending">
+                        <div class="dailySpending__pillar" data-amount="$27.00"></div>
+                        <span class="dailySpending__day">sun</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="results flex sb">
+                <div class="total">
+                    <h4>Total this month</h4>
+                    <span class="total__spent">$478.33</span>
+                </div>
+                <div class="percent">
+                    <span>+2.4%</span>
+                    <p>from last month</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,186 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  box-sizing: border-box;
+  background-color: hsl(27deg, 66%, 92%);
+  height: 100vh;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  font-family: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.flex .sb {
+  justify-content: space-between !important;
+}
+.flex .ai-end {
+  align-items: flex-end;
+}
+.flex .g-1 {
+  gap: 1rem;
+}
+.flex .g-2 {
+  gap: 2rem;
+}
+
+main {
+  width: min(90%, 40rem);
+}
+main .header {
+  background-color: hsl(10deg, 79%, 65%);
+  padding: 3rem;
+  border-radius: 2rem;
+}
+main .header__balance {
+  color: #fff;
+}
+main .header__balance h3 {
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+main .header__balance span {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+main .header__logo {
+  height: 4rem;
+}
+main .header__logo img {
+  height: 100%;
+}
+main .wrapper {
+  background-color: hsl(33deg, 100%, 98%);
+  padding: 3rem;
+  border-radius: 2rem;
+}
+main .wrapper .spending {
+  border-bottom: 2px solid hsl(27deg, 66%, 92%);
+  padding-bottom: 2rem;
+}
+main .wrapper .spending h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+main .wrapper .spending__graph {
+  margin-top: 4rem;
+  height: 14rem;
+  list-style: none;
+  gap: 1.5rem;
+  border-bottom: 1px solid hsl(33deg, 100%, 98%);
+}
+main .wrapper .spending__graph .dailySpending {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  height: 100%;
+  width: 100%;
+}
+main .wrapper .spending__graph .dailySpending__pillar {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: hsl(10deg, 79%, 65%);
+  transition: all 150ms ease;
+  cursor: pointer;
+}
+main .wrapper .spending__graph .dailySpending__pillar::before {
+  content: attr(data-amount);
+  position: absolute;
+  top: -3rem;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  width: 135%;
+  font-size: 1.1rem;
+  color: #fff;
+  padding: 0.6rem 0.5rem;
+  background-color: black;
+  border-radius: 0.5rem;
+  transform: translateX(-50%);
+  transition: all 150ms ease;
+}
+main .wrapper .spending__graph .dailySpending__pillar:hover {
+  background-color: rgba(236, 119, 95, 0.5);
+}
+main .wrapper .spending__graph .dailySpending__pillar:hover::before {
+  opacity: 1;
+}
+main .wrapper .spending__graph .dailySpending .cyan {
+  background-color: hsl(186deg, 34%, 60%);
+}
+main .wrapper .spending__graph .dailySpending .cyan:hover {
+  background-color: rgba(118, 181, 188, 0.5);
+}
+main .wrapper .spending__graph .dailySpending:nth-of-type(1) .dailySpending__pillar {
+  height: 38.1970970206%;
+}
+main .wrapper .spending__graph .dailySpending:nth-of-type(2) .dailySpending__pillar {
+  height: 63.025210084%;
+}
+main .wrapper .spending__graph .dailySpending:nth-of-type(3) .dailySpending__pillar {
+  height: 100%;
+}
+main .wrapper .spending__graph .dailySpending:nth-of-type(4) .dailySpending__pillar {
+  height: 59.3391902215%;
+}
+main .wrapper .spending__graph .dailySpending:nth-of-type(5) .dailySpending__pillar {
+  height: 47.7463712758%;
+}
+main .wrapper .spending__graph .dailySpending:nth-of-type(6) .dailySpending__pillar {
+  height: 76.3941940413%;
+}
+main .wrapper .spending__graph .dailySpending:nth-of-type(7) .dailySpending__pillar {
+  height: 51.5660809778%;
+}
+main .wrapper .spending__graph .dailySpending__day {
+  color: rgba(147, 134, 123, 0.9);
+}
+main .wrapper .results {
+  padding-top: 2.5rem;
+}
+main .wrapper .results .total h4 {
+  color: rgba(147, 134, 123, 0.9);
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+main .wrapper .results .total span {
+  color: #000;
+  font-weight: 700;
+  font-size: 3.8rem;
+}
+main .wrapper .results .percent {
+  align-self: flex-end;
+  margin-bottom: 1rem;
+}
+main .wrapper .results .percent span {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: end;
+}
+main .wrapper .results .percent p {
+  color: rgba(147, 134, 123, 0.9);
+  font-size: 1.4rem;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,123 @@
+main {
+  height: 100vh;
+  width: 100vw;
+  background-color: hsl(216deg, 12%, 8%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.wrapper {
+  height: 38.2rem;
+  height: auto;
+  width: min(90%, 40rem);
+  background-color: hsl(213deg, 19%, 18%);
+  border-radius: 4rem;
+  padding: 3rem;
+}
+.wrapper .rating__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2.5rem;
+}
+.wrapper .rating__star {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  height: 5rem;
+  width: 5rem;
+  background-color: rgba(124, 135, 152, 0.2);
+  border-radius: 100vmax;
+}
+.wrapper .rating__info h1 {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.wrapper .rating__info p {
+  color: hsl(217deg, 12%, 63%);
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+.wrapper .rating__list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.wrapper .rating__list_btn {
+  width: 20%;
+  height: 5.2rem;
+  border: 0;
+  border-radius: 100vmax;
+  color: hsl(217deg, 12%, 63%);
+  background-color: rgba(124, 135, 152, 0.2);
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+.wrapper .rating__list_btn:hover {
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(217deg, 12%, 63%);
+}
+.wrapper .rating__list_activeBtn {
+  color: hsl(0deg, 0%, 100%) !important;
+  background-color: hsl(25deg, 97%, 53%) !important;
+}
+.wrapper .rating__cta {
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 1.5rem 0;
+  letter-spacing: 0.1rem;
+  color: #fff;
+  border: 0;
+  border-radius: 100vmax;
+  background-color: hsl(25deg, 97%, 53%);
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+.wrapper .rating__cta:hover {
+  color: hsl(25deg, 97%, 53%);
+  background-color: hsl(0deg, 0%, 100%);
+}
+.wrapper .appreciation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2rem 0;
+}
+.wrapper .appreciation .illustration {
+  margin-left: -2rem;
+}
+.wrapper .appreciation__rating {
+  color: hsl(25deg, 97%, 53%);
+  background-color: rgba(124, 135, 152, 0.2);
+  font-weight: 400;
+  padding: 1rem 2.5rem;
+  border-radius: 100vmax;
+  font-size: 1.4rem;
+}
+.wrapper .appreciation__text {
+  text-align: center;
+}
+.wrapper .appreciation__text h1 {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 2.6rem;
+  margin-bottom: 1.5rem;
+}
+.wrapper .appreciation__text p {
+  color: hsl(216deg, 12%, 54%);
+  font-size: 1.4rem;
+  line-height: 2rem;
+}/*# sourceMappingURL=App.css.map */
