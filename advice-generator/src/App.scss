@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+// Primary
+$light_cyan: hsl(193, 38%, 86%);
+$neon_green: hsl(150, 100%, 66%);
+
+//Neutral
+$grayish_blue: hsl(217, 19%, 38%);
+$dark_grayish_blue: hsl(217, 19%, 24%);
+$dark_blue: hsl(218, 23%, 16%);
+
+$quote-font-size: 2.8rem;
+$regular: 400;
+$bold: 800;
+
+//Media
+$mobile: 375px;
+$desktop: 1440px;
+
+html{
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'DM Sans', sans-serif;
+  background-color: $dark_blue;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+  font-family: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: $dark_grayish_blue;
+  width: min(90%, 55rem);
+  padding: 3rem;
+  padding-bottom: 6rem;
+  border-radius: 1.5rem;
+
+  & .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    &__title{
+      color: $neon_green;
+      font-size: 1.2rem;
+      letter-spacing: .2rem;
+      font-weight: $regular;
+      text-align: center;
+    }
+
+    &__quote{
+      color: $light_cyan;
+      font-size: $quote-font-size;
+      font-weight: $bold;
+      text-align: center;
+    }
+
+    & .pattern-divider{
+      height: 2rem;
+      width: 100%;
+      background-image: url('./images/pattern-divider-mobile.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-top: 2rem;
+      
+      @media screen and (min-width: $mobile) {
+        background-image: url('./images/pattern-divider-desktop.svg');
+      }
+    }
+
+    & .loading{
+      position: relative;
+      width: 90%;
+      height: 2rem;
+
+      border-radius: .5rem;
+      background-color: $grayish_blue;
+      overflow: hidden;
+
+      &::after{
+        content: '';
+        position: absolute;
+        left: -50%;
+        height: 100%;
+        width: 40%;
+        transform: skewX(-5deg);
+        background-color: rgba($light_cyan, 60%);
+        animation: loading .8s linear infinite forwards;
+      }
+
+      @keyframes loading {
+        100% {
+          left: 100%;
+        }
+      }
+    }
+  }
+
+  & .dice{
+    position: absolute;
+    bottom: -3rem;
+    left: 50%;
+
+    width: 6rem;
+    height: 6rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: $neon_green;
+    border: none;
+    border-radius: 100vmax;
+    transform: translateX(-50%);
+
+    user-select: none;
+    transition: all 150ms ease;
+    cursor: pointer;
+
+    &[disabled] {
+      background-color: hsl(150, 61%, 68%);
+      box-shadow: none !important;
+      cursor: default;
+    }
+
+    &:hover{
+      box-shadow: 0 0 25px 8px rgba($neon_green, .5);
+    }
+    
+    &:active{
+      box-shadow: 0 0 15px 4px rgba($neon_green, .5);
+    }
+  }
+}
