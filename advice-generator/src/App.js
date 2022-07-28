@@ -14,7 +14,7 @@ function App() {
   
   const fetchAdvice = async () => {
     setLoading(true);
-    const { slip } = await (await fetch("https://api.adviceslip.com/advice")).json();
+    const { slip } = await (await fetch("https://api.adviceslip.com/advice", {cache: "no-cache"})).json();
     setLoading(false);
     
     setQuote(slip.advice);
