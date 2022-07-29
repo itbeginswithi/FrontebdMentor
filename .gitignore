@@ -1,4 +1,6 @@
+.history
+
 ./interactive-rating-component/node_modules
 ./expenses-chart/node_modules
-./advice-geenrator/node_modules
-.history
+./advice-generator/node_modules
+./chat-app-css-illustration-master/node_modules
