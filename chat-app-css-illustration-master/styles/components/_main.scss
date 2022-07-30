@@ -49,16 +49,16 @@
     &::after{
         bottom: 0;
         right: 0;
-        background-color: $light-grey;
+        background-color: rgba(249,244,250,255);
         border-top-right-radius: 100vmax;
         border-top-left-radius: 100vmax;
         
         margin-right: -7%;
-        
+             
         @media (max-width: $mobile){
             margin-right: -50%;
         }
-    }
+    }    
 
     & .content{
         display: flex;
