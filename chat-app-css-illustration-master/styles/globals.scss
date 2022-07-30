@@ -1,0 +1,41 @@
+@import "./abstracts/variables";
+@import "./abstracts/typography";
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+    font-family: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{    
+    font-family: $font-family;
+    box-sizing: border-box;
+    background-color: $light_grayish_violet;
+}   
+
+
+@import "./components/main";
+@import "./components/footer";
+
+
+
+
+/******************************/
+::-webkit-scrollbar{
+    width: .5rem;
+    background: $pale-violet;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: $moderate_violet;
+    border-radius: 1rem;
+}
+     

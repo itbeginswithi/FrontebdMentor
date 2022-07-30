@@ -4,12 +4,25 @@
   "description": "![Design preview for the Chat app CSS illustration coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch:sass": "node-sass styles/globals.scss css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel watch:sass devserver",
+
+    "compile:sass": "node-sass styles/globals.scss css/style.comp.css",
+    "concat:css": "concat -o css/style.concat.css css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [],       
+  "author": "",  
   "license": "ISC",
   "dependencies": {
-    "sass": "^1.54.0"
+    "autoprefixer": "^10.4.8",
+    "node-sass": "^7.0.1"
+  },
+  "devDependencies": {
+    "concat": "^1.0.3",
+    "postcss-cli": "^10.0.0"
   }
 }

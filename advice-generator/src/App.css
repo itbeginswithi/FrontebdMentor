@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+  background-color: hsl(218deg, 23%, 16%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: hsl(217deg, 19%, 24%);
+  width: min(90%, 55rem);
+  padding: 3rem;
+  padding-bottom: 6rem;
+  border-radius: 1.5rem;
+}
+.wrapper .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.wrapper .content__title {
+  color: hsl(150deg, 100%, 66%);
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+  font-weight: 400;
+  text-align: center;
+}
+.wrapper .content__quote {
+  color: hsl(193deg, 38%, 86%);
+  font-size: 2.8rem;
+  font-weight: 800;
+  text-align: center;
+}
+.wrapper .content .pattern-divider {
+  height: 2rem;
+  width: 100%;
+  background-image: url("./images/pattern-divider-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 2rem;
+}
+@media screen and (min-width: 375px) {
+  .wrapper .content .pattern-divider {
+    background-image: url("./images/pattern-divider-desktop.svg");
+  }
+}
+.wrapper .content .loading {
+  position: relative;
+  width: 90%;
+  height: 2rem;
+  border-radius: 0.5rem;
+  background-color: hsl(217deg, 19%, 38%);
+  overflow: hidden;
+}
+.wrapper .content .loading::after {
+  content: "";
+  position: absolute;
+  left: -50%;
+  height: 100%;
+  width: 40%;
+  transform: skewX(-5deg);
+  background-color: rgba(206, 227, 233, 0.6);
+  -webkit-animation: loading 0.8s linear infinite forwards;
+          animation: loading 0.8s linear infinite forwards;
+}
+@-webkit-keyframes loading {
+  100% {
+    left: 100%;
+  }
+}
+@keyframes loading {
+  100% {
+    left: 100%;
+  }
+}
+.wrapper .dice {
+  position: absolute;
+  bottom: -3rem;
+  left: 50%;
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(150deg, 100%, 66%);
+  border: none;
+  border-radius: 100vmax;
+  transform: translateX(-50%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transition: all 150ms ease;
+  cursor: pointer;
+}
+.wrapper .dice[disabled] {
+  background-color: hsl(150deg, 61%, 68%);
+  box-shadow: none !important;
+  cursor: default;
+}
+.wrapper .dice:hover {
+  box-shadow: 0 0 25px 8px rgba(82, 255, 168, 0.5);
+}
+.wrapper .dice:active {
+  box-shadow: 0 0 15px 4px rgba(82, 255, 168, 0.5);
+}/*# sourceMappingURL=App.css.map */

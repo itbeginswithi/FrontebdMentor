@@ -5,47 +5,105 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>Frontend Mentor | Chat App</title>
 </head>
 <body>
 
-  Samuel Green
-  Available to Walk
+  <main class="wrapper">
+    <div class="content">
+      <div class="iphone">
+        <div class="app">
+          <div class="app__header">
+            <div class="app__header_account">
+              <i class="fi fi-br-angle-left angle-left"></i>
+              <img src="./images/avatar.jpg" alt="user icon" draggable="false"/>
+              <div class="app__header_account__info">
+                <span class="name">Samuel Green</span>
+                <span class="state">Available to Walk</span>
+              </div>
+              <i class="fi fi-bs-menu-dots-vertical settings"></i>
+            </div>
+          </div>
 
-  That sounds great. I’d be happy with that.
+          <div class="app__chat">
+            <div class="chat">
+              <div class="contact-wrapper">
+                <div class="message message-contact message-left">
+                  That sounds great. I’d be <br/> happy with that.
+                </div>
+                <div class="message message-contact message-left">
+                  Could you send over some pictures of your dog, please?
+                </div>
+              </div>
+              
+              <div class="user-wrapper">
+                <div class="message message-right message-images">
+                  <img src="./images/dog-image-1.jpg" alt="dog looking up" draggable="false"/>
+                  <img src="./images/dog-image-2.jpg" alt="puppy" draggable="false"/>
+                  <img src="./images/dog-image-3.jpg" alt="dog carrying a tree bark" draggable="false"/>
+                </div>
 
-  Could you send over some pictures of your dog, please?
+                <div class="message message-user message-right">
+                  Here are a few pictures. She’s a happy girl!
+                </div>
+                <div class="message message-user message-right">
+                  Can you make it?
+                </div>
+              </div>
 
-  Here are a few pictures. She’s a happy girl!
+              <div class="contact-wrapper">
+                <div class="message message-contact message-left">
+                  She looks so happy! The time we discussed works. How long shall I take her out for?
+                </div>
+                <div class="billing">
+                  <div class="select"></div>
+                  <p class="service">30 minute walk</p>
+                  <p class="price">$29</p>
+                </div>
+                <div class="billing">
+                  <div class="select"></div>
+                  <p class="service">1hour walk</p>
+                  <p class="price">$49</p>
+                </div>
+              </div>
+            </div>
+            <div class="input__container">
+              <p>Type a message...</p>
 
-  Can you make it?
+              <button class="btn-send">
+                <i class="fi fi-sr-angle-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  She looks so happy! The time we discussed works. How long shall I take her out for?
+      <div class="description">
+        <h1>Simple Booking</h1>
+        <p>
+          Stay in touch with our dog walkers throught the chat
+          <!-- <br/> -->
+          interface. This makes it easy to dicuss arrangements and 
+          <!-- <br/> -->
+          make bookings. Once the walk has been completed you can
+          <!-- <br/> -->
+          rate your walker and book again all through the chat.
+        </p>
+      </div>
+    </div>   
+  </main>
 
-  30 minute walk
-  $29
-
-  1 hour walk
-  $49
-
-  Type a message…
-
-  Simple booking
-
-  Stay in touch with our dog walkers through the chat interface. This makes it easy to 
-  discuss arrangements and make bookings. Once the walk has been completed you can rate 
-  your walker and book again all through the chat.
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io/challenges/chat-app-css-illustration-O5auMkFqY/hub/chat-app-css-illustration-ypeM4-YPhN" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/itbeginswithi" target="_blank">Ismail</a>.
   </div>
 </body>
 </html>
