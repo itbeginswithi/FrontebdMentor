@@ -1,0 +1,132 @@
+.jobItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: .5rem;
+  box-shadow: 0 5px 15px -5px rgba($dark_grayish_cyan, 65%);
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    align-items: flex-start;
+
+  }
+  
+  &.featured {
+    border-left: 5px solid $desaturated_dark_cyan;
+  }
+  
+  &__info{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+    
+    @media screen and (max-width: $mobile){
+      width: 100%;
+      
+      flex-direction: column;
+      align-items: flex-start;
+      padding-bottom: 2rem;
+
+      border-bottom: 1px solid $dark_grayish_cyan;
+
+    }
+    
+    &_logo{
+      height: 7rem;
+      width: 7rem;
+      cursor: pointer;
+
+      @media screen and (max-width: $mobile){
+        height: 5rem;
+        width: 5rem;
+        align-self: start;
+        margin-top: -4rem;
+      }
+    }
+
+    &_details{
+      &__position,
+      &__name{
+        color: $desaturated_dark_cyan;
+      }
+      
+      &__name {        
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: .8rem;
+        cursor: pointer;
+        
+        & p{
+          font-size: 1.6rem;
+          font-weight: $bold;
+          margin-right: .7rem;
+        }
+
+        & span{
+          color: #fff;
+          padding: .5rem .8rem;
+          border-radius: 100vmax;
+          font-size: 1.2rem;
+          
+          &.new{
+            background-color: $desaturated_dark_cyan;
+          }
+
+          &.featured{
+            background-color: $very_dark_grayish_cyan;
+          }
+        }
+      }
+
+      &__position{
+        margin: 1rem 0;
+        cursor: pointer;
+      }
+
+      &__more{
+        display: inline-block;
+        font-size: 1.3rem;
+        color: $dark_grayish_cyan;
+      }
+
+    }
+  }
+
+  &__languages{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    
+    
+    @media screen and (max-width: $mobile){
+      padding-top: 2rem;
+    }
+
+    & span{
+      font-size: 1.4rem;
+      font-weight: $bold;
+      padding: .8rem;
+
+      color: $desaturated_dark_cyan;
+      background-color: $light_grayish_cyan;
+      
+      border-radius: .5rem;
+      
+      transition: all 150ms ease;
+      cursor: pointer;
+      
+      &:hover{
+        color: $light_grayish_cyan;
+        background-color: $desaturated_dark_cyan;
+      }
+    }
+  }
+}

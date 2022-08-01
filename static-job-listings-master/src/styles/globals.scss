@@ -3,5 +3,9 @@
 @import './base/base';
 @import './base/typography';
 
+@import './components/JobList';
+@import './components/JobItem';
+@import './components/filter';
+
 @import './layout/header';
 @import './layout/main';

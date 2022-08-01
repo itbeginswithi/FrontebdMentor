@@ -1,0 +1,75 @@
+.filter {
+  width: 100%;
+  padding: 1rem 2rem;
+  margin-bottom: 4rem;
+  margin-top: -6rem;
+
+  background-color: $white;
+
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 15px -5px rgba($dark_grayish_cyan, 75%);
+
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    list-style: none;
+
+    &_tag {
+      display: flex;
+      border-radius: .5rem;
+      overflow: hidden;
+      transition: all 150ms linear;
+
+      & span {
+        align-self: center;
+
+        padding: 1rem;
+        background-color: $light_grayish_cyan;
+        color: $desaturated_dark_cyan;
+        font-weight: 700;
+        font-size: 1.4rem;
+        letter-spacing: .03rem;
+      }
+
+      & button{
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+
+        color: #fff;
+        padding: .8rem;
+        background-color: $desaturated_dark_cyan;   
+        
+        border: none;
+        cursor: pointer;
+
+        
+        &:hover{
+            background-color: #000;
+        }
+      }
+    }
+  }
+
+  &__clear{
+    color: $desaturated_dark_cyan;
+    font-size: 1.5rem;
+
+    border: none;
+    background: transparent;
+    transition: all 150ms linear;
+
+    cursor: pointer;
+    
+    &:hover{
+        text-decoration: underline;
+    }
+  }
+}

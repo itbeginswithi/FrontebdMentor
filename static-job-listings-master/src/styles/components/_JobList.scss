@@ -1,0 +1,11 @@
+.jobList{
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @media screen and (max-width: $mobile){
+        gap: 5rem;
+    }
+}
