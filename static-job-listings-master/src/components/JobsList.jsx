@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useSelector } from 'react-redux';
 import JobItem from './JobItem'
 
@@ -8,7 +8,7 @@ const JobsList = () => {
   const {tags} = useSelector(state => state);
 
   
-  let filteredJobs = data.filter((job) => {
+  const filteredJobs = data.filter((job) => {
     const jobRequirement = [
       job.level,
       job.role,
@@ -20,7 +20,7 @@ const JobsList = () => {
       return job;
     }
   })
-  
+
   return (
     <ul className="jobList">
         {
