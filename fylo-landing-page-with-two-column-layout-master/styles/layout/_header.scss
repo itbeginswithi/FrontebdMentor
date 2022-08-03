@@ -1,0 +1,30 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 0;
+    padding-right: $section-padding;
+    padding-left: $section-padding;
+
+    & .logo{
+        height: 4rem;
+
+        & img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+    
+    & .nav{
+        & ul{
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+        
+            & li{
+                font-size: 1.4rem;
+                cursor: pointer;
+            }
+        }
+    }
+}

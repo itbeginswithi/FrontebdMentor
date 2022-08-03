@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    font-family: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+
+    @media screen and (max-width: 900px) {
+        font-size: 50%;
+    }
+
+    @media screen and (max-width: $mobile) {
+        font-size: 50%;
+    }
+}
+
+body{
+    font-family: $raleway;
+    box-sizing: border-box;
+    
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.btn{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    
+}     
+
+.section-padding{
+    padding-right: $section-padding;
+    padding-left: $section-padding;
+}     
+
+.section-flex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 2rem;
+
+    @media screen and (max-width: $mobile){
+        flex-direction: column;
+    }
+}

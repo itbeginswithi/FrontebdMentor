@@ -1,0 +1,108 @@
+.footer{
+    background-color: $very_dark_blue;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+
+    &__logo{
+        height: 3.5rem;
+        
+        & img{
+            height: 100%;
+        }
+    }   
+
+    &__info{
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        flex-wrap: wrap;
+        
+        width: 80%;
+        
+        &_address{
+            & a{
+                display: flex;
+                align-items: center;
+                gap: 1.5rem;
+                
+                font-size: 1.2rem;
+                text-decoration: none;
+                color: #fff;
+
+                &:first-of-type{
+                    margin-bottom: 1rem;
+                }
+
+                &:hover{
+                    text-decoration: underline;
+                    text-underline-offset: .5rem;
+                }
+
+                & img{
+                    height: 1.4rem;
+                }
+
+            }
+        }
+
+        &_list{
+            list-style: none;
+            color: #fff;
+            
+            & li{
+                font-size: 1.2rem;
+                font-size: 1.2rem;
+                transition: all 200ms ease;
+                cursor: pointer;
+
+                &:not(:last-of-type){
+                    margin-bottom: 1rem;
+                }
+
+                &:hover{
+                    text-decoration: underline;
+                    text-underline-offset: .3rem;
+                }
+            }
+        }
+
+        &_social {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+
+            & a{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                text-decoration: none;
+                color: #fff;
+                
+                height: 3rem;
+                width: 3rem;  
+                border: 2px solid #fff;
+                border-radius: 100vmax;
+
+                transition: all 150ms ease;
+
+                &:hover{
+                    color: $bright_blue;
+                    border-color: $bright_blue;
+                }
+
+                & i{
+                    font-size: 1.4rem;
+                    margin-top: .2rem;
+                }
+                
+            }
+        }
+    }
+
+}

@@ -1,0 +1,258 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  font-family: inherit;
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden; }
+  @media screen and (max-width: 900px) {
+    html {
+      font-size: 50%; } }
+  @media screen and (max-width: 375px) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
+  max-width: 1400px;
+  margin: 0 auto; }
+
+.btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer; }
+
+.section-padding {
+  padding-right: 5rem;
+  padding-left: 5rem; }
+
+.section-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem; }
+  @media screen and (max-width: 375px) {
+    .section-flex {
+      flex-direction: column; } }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 0;
+  padding-right: 5rem;
+  padding-left: 5rem; }
+  .header .logo {
+    height: 4rem; }
+    .header .logo img {
+      height: 100%;
+      width: 100%; }
+  .header .nav ul {
+    display: flex;
+    list-style: none;
+    gap: 3rem; }
+    .header .nav ul li {
+      font-size: 1.4rem;
+      cursor: pointer; }
+
+.footer {
+  background-color: #070439;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3rem; }
+  .footer__logo {
+    height: 3.5rem; }
+    .footer__logo img {
+      height: 100%; }
+  .footer__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+    width: 80%; }
+    .footer__info_address a {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: #fff; }
+      .footer__info_address a:first-of-type {
+        margin-bottom: 1rem; }
+      .footer__info_address a:hover {
+        text-decoration: underline;
+        text-underline-offset: .5rem; }
+      .footer__info_address a img {
+        height: 1.4rem; }
+    .footer__info_list {
+      list-style: none;
+      color: #fff; }
+      .footer__info_list li {
+        font-size: 1.2rem;
+        font-size: 1.2rem;
+        transition: all 200ms ease;
+        cursor: pointer; }
+        .footer__info_list li:not(:last-of-type) {
+          margin-bottom: 1rem; }
+        .footer__info_list li:hover {
+          text-decoration: underline;
+          text-underline-offset: .3rem; }
+    .footer__info_social {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none; }
+      .footer__info_social a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: #fff;
+        height: 3rem;
+        width: 3rem;
+        border: 2px solid #fff;
+        border-radius: 100vmax;
+        transition: all 150ms ease; }
+        .footer__info_social a:hover {
+          color: #3065f8;
+          border-color: #3065f8; }
+        .footer__info_social a i {
+          font-size: 1.4rem;
+          margin-top: .2rem; }
+
+.section-one {
+  height: 100vh;
+  padding-bottom: 15rem; }
+
+.guide {
+  flex: 1; }
+  .guide__title {
+    font-family: "Raleway", sans-serif;
+    font-size: 4.6rem;
+    line-height: 6.2rem;
+    color: #070439; }
+  .guide__description {
+    color: #585989;
+    font-size: 2.1rem;
+    margin: 2rem 0; }
+  .guide__form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 85%; }
+    .guide__form_input,
+    .guide__form .btn-submit {
+      padding: 1rem;
+      border-radius: .5rem; }
+    .guide__form_input {
+      outline: none;
+      border: 1px solid black;
+      flex: 2; }
+      .guide__form_input::placeholder {
+        color: #bfbfbf; }
+    .guide__form .btn-submit {
+      flex: 1.2;
+      color: #fff;
+      background-color: #3065f8;
+      cursor: pointer; }
+
+.illustration {
+  flex: 1; }
+  .illustration img {
+    height: 100%;
+    width: 100%; }
+
+.section-two {
+  position: relative;
+  height: 100vh;
+  background-color: #f9f8fe; }
+  .section-two::before {
+    content: '';
+    position: absolute;
+    top: -11.5rem;
+    width: 100%;
+    height: 12rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    background-image: url("../../images/bg-curve-desktop.svg");
+    background-size: cover;
+    background-repeat: no-repeat; }
+  @media screen and (max-width: 375px) {
+    .section-two .guide {
+      order: 2; }
+    .section-two .illustration {
+      order: 1; } }
+  .section-two .guide__cta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2.1rem;
+    color: #3c9f8f;
+    width: fit-content;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #3c9f8f; }
+    .section-two .guide__cta img {
+      height: 2rem;
+      width: 2rem; }
+  .section-two .guide__testimonial {
+    padding: 2.5rem;
+    width: 60%;
+    background-color: #fff;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+    border-radius: .5rem;
+    margin-top: 5rem; }
+    .section-two .guide__testimonial_quotes {
+      height: 1.5rem; }
+    .section-two .guide__testimonial_text {
+      margin: 2rem 0;
+      font-size: 1.5rem;
+      line-height: 2.3rem;
+      font-weight: 700;
+      color: rgba(0, 0, 0, 0.8); }
+    .section-two .guide__testimonial .client {
+      display: flex;
+      align-items: center;
+      gap: 1rem; }
+      .section-two .guide__testimonial .client__avatar {
+        height: 4rem;
+        width: 4rem;
+        border-radius: 100vmax; }
+      .section-two .guide__testimonial .client__info_name, .section-two .guide__testimonial .client__info_position {
+        display: block; }
+      .section-two .guide__testimonial .client__info_name {
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-bottom: .2rem; }
+
+.signup {
+  background-color: #585989;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  justify-content: space-between; }
+  .signup__description {
+    width: 40%;
+    color: #fff; }
+    .signup__description_title {
+      font-size: 2.6rem;
+      margin-bottom: 2rem; }
+    .signup__description_text {
+      font-size: 1.5rem; }
+  .signup .guide__form {
+    width: 40%;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem; }
+    .signup .guide__form_input {
+      width: 80%; }
+    .signup .guide__form .btn-submit {
+      width: 35%; }

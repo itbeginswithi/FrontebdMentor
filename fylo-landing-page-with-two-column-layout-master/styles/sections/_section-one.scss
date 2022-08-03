@@ -1,0 +1,64 @@
+.section-one{
+    height: 100vh;
+    // height: calc(100vh - 12rem);
+    padding-bottom: 15rem;
+}
+
+    .guide{    
+        flex: 1;
+
+        &__title{
+            font-family: $raleway;
+            font-size: 4.6rem;    
+            line-height: 6.2rem;
+
+            color: $very_dark_blue;        
+        }
+
+        &__description{
+            color: $desaturated_blue;
+            font-size: 2.1rem;
+            margin: 2rem 0;
+        }
+
+        &__form{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+
+            width: 85%;
+     
+            &_input,
+            & .btn-submit{
+                padding: 1rem;
+                border-radius: .5rem;
+            }   
+    
+            &_input{
+                outline: none;
+                border: 1px solid black;
+                flex: 2;
+                &::placeholder{
+                    color: $light-gray;
+                }   
+            }
+
+            & .btn-submit{
+                flex: 1.2;
+                color: #fff;
+                background-color: $bright_blue;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .illustration{
+        flex: 1;
+
+        & img{
+            height: 100%;
+            width: 100%;   
+        }
+    }

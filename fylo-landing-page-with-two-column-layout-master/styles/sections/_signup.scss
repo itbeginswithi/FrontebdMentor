@@ -1,0 +1,35 @@
+.signup{
+    background-color: $desaturated_blue;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    justify-content: space-between;
+
+    &__description{
+        width: 40%;
+        color: #fff;
+
+        &_title{
+            font-size: 2.6rem;
+            margin-bottom: 2rem;
+        }
+
+        &_text{
+            font-size: 1.5rem;
+        }
+    }
+
+    & .guide__form{
+        width: 40%;
+        flex-direction: column;
+        align-items: start;
+        gap: 1rem;
+
+        &_input{
+            width: 80%;
+        }
+
+        & .btn-submit{
+            width: 35%
+        }
+    }
+}
