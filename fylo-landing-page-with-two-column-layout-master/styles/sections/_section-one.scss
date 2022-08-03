@@ -59,6 +59,7 @@
 
         @media screen and (max-width: $mobile) {
             text-align: center;
+            margin: 4rem 0;   
         }
     }
 
@@ -74,13 +75,13 @@
             @media screen and (max-width: $mobile) {
                 width: 100%;
             }
-     
+            
             &_input,
             & .btn-submit{
                 padding: 1rem;
                 border-radius: .5rem;
             }   
-    
+            
             &_input{
                 outline: none;
                 border: 1px solid black;
@@ -89,12 +90,20 @@
                     color: $light-gray;
                 }   
             }
-
+            
             & .btn-submit{
                 flex: 1.2;
                 color: #fff;
                 background-color: $bright_blue;
                 cursor: pointer;
+            }
+
+            @media screen and (max-width: 375px) {
+                &_input,
+                & .btn-submit{
+                    flex: none;
+                    width: 100%;
+                }
             }
         }
     }

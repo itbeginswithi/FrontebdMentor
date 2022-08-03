@@ -191,7 +191,8 @@ body {
     margin: 2rem 0; }
     @media screen and (max-width: 700px) {
       .guide__description {
-        text-align: center; } }
+        text-align: center;
+        margin: 4rem 0; } }
   .guide__form {
     display: flex;
     flex-wrap: wrap;
@@ -217,6 +218,11 @@ body {
       color: #fff;
       background-color: #3065f8;
       cursor: pointer; }
+    @media screen and (max-width: 375px) {
+      .guide__form_input,
+      .guide__form .btn-submit {
+        flex: none;
+        width: 100%; } }
 
 .illustration img {
   height: 100%;
