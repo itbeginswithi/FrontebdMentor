@@ -8,6 +8,11 @@
     align-items: flex-start;
     gap: 3rem;
 
+    
+    @media screen and (max-width: $mobile) {
+        gap: 4rem;
+    }
+
     &__logo{
         height: 3.5rem;
         
@@ -22,9 +27,15 @@
         align-items: start;
         flex-wrap: wrap;
         
-        width: 80%;
+        width: 80%;  
+
+        @media screen and (max-width: $mobile) {
+            width: 100%;
+            gap: 5rem;
+        }
         
         &_address{
+
             & a{
                 display: flex;
                 align-items: center;
@@ -49,8 +60,9 @@
 
             }
         }
-
+        
         &_list{
+
             list-style: none;
             color: #fff;
             
@@ -75,6 +87,10 @@
             display: flex;
             gap: 1.5rem;
             list-style: none;
+
+            @media screen and (max-width: $mobile) {
+                justify-content: center;
+            }
 
             & a{
                 display: flex;
@@ -101,6 +117,14 @@
                     margin-top: .2rem;
                 }
                 
+            }
+        }
+
+        @media screen and (max-width: 375px){
+            &_social,
+            &_list,
+            &_address{
+                width: 100%;
             }
         }
     }

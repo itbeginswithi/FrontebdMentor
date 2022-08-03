@@ -38,6 +38,11 @@ body{
 .section-padding{
     padding-right: $section-padding;
     padding-left: $section-padding;
+    
+    @media screen and (max-width: 700px){
+        padding-right: 3rem !important  ;
+        padding-left: 3rem !important   ;
+    }
 }     
 
 .section-flex{
@@ -47,7 +52,8 @@ body{
 
     gap: 2rem;
 
-    @media screen and (max-width: $mobile){
+    @media screen and (max-width: 700px){
         flex-direction: column;
+        gap: 8rem;
     }
 }

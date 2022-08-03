@@ -2,24 +2,65 @@
     height: 100vh;
     // height: calc(100vh - 12rem);
     padding-bottom: 15rem;
+
+    @media screen and (max-width: $mobile){
+        height: 100%;
+        padding: 5rem 5rem 15rem;
+    }    
 }
 
-    .guide{    
-        flex: 1;
+.guide, 
+.illustration{    
+    flex: 1;
+    
+    @media screen and (max-width: $mobile){
+        flex: none;
+    }    
 
-        &__title{
-            font-family: $raleway;
-            font-size: 4.6rem;    
-            line-height: 6.2rem;
+}
 
-            color: $very_dark_blue;        
+@media screen and (max-width: $mobile) {
+    & .guide{
+        order: 2;
+    }
+
+    & .illustration{    
+        order: 1;
+    }
+}
+
+.guide{    
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: $mobile) {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    &__title{
+        font-family: $raleway;
+        font-size: 4.6rem;    
+        line-height: 6.2rem;
+        
+        color: $very_dark_blue;        
+    
+        @media screen and (max-width: $mobile) {
+            text-align: center;
+            font-size: 2.3rem;
+            line-height: 3.2rem;
         }
+    }
+    
+    &__description{
+        color: $desaturated_blue;
+        font-size: 2.1rem;
+        margin: 2rem 0;
 
-        &__description{
-            color: $desaturated_blue;
-            font-size: 2.1rem;
-            margin: 2rem 0;
+        @media screen and (max-width: $mobile) {
+            text-align: center;
         }
+    }
 
         &__form{
             display: flex;
@@ -29,6 +70,10 @@
             gap: 2rem;
 
             width: 85%;
+
+            @media screen and (max-width: $mobile) {
+                width: 100%;
+            }
      
             &_input,
             & .btn-submit{
@@ -55,7 +100,6 @@
     }
 
     .illustration{
-        flex: 1;
 
         & img{
             height: 100%;
